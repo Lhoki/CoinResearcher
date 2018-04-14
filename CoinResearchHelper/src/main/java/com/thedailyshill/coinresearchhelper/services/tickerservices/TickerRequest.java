@@ -16,7 +16,11 @@ public class TickerRequest {
 	StringBuffer response = new StringBuffer();
 
 
+<<<<<<< HEAD
 	public JSONArray returnTickerRequest() throws Exception {
+=======
+	public String returnTickerRequest() throws Exception {
+>>>>>>> d3dce49789b80592f61a43ea643ed495c63de687
 		
 		URL obj = new URL(defaultUrl);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -27,11 +31,20 @@ public class TickerRequest {
 		}
 
 		in.close();
+<<<<<<< HEAD
 		return new JSONArray(response.toString());
 
 	}
 	
 	public JSONArray returnTickerRequest(String cryptoName) throws Exception {
+=======
+		JSONArray myResponse = new JSONArray(response.toString());
+		return new JsonPrettier().prettyFy(myResponse);
+
+	}
+	
+	public String returnTickerRequest(String cryptoName) throws Exception {
+>>>>>>> d3dce49789b80592f61a43ea643ed495c63de687
 		
 		URL obj = new URL(defaultUrl+cryptoName);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -42,9 +55,17 @@ public class TickerRequest {
 		}
 
 		in.close();
+<<<<<<< HEAD
 		return new JSONArray(response.toString());
 
 	}
 
 
+=======
+		JSONArray myResponse = new JSONArray(response.toString());
+		return new JsonPrettier().prettyFy(myResponse);
+
+	}
+
+>>>>>>> d3dce49789b80592f61a43ea643ed495c63de687
 }
