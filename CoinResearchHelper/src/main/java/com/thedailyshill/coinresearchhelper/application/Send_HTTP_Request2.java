@@ -5,39 +5,14 @@
  */
 package com.thedailyshill.coinresearchhelper.application;
 
-import com.thedailyshill.coinresearchhelper.services.tickerservices.DataRequest;
 
 public class Send_HTTP_Request2 {
 	public static void main(String[] args) throws Exception {
-		System.out.println(new DataRequest().marketCap("bitcoin"));
 		
-//		ReturnSingleData rsd = new ReturnSingleData();		
-//		System.out.println(rsd.returnSingleData("max_supply", "payfair"));
+		TempPrintClass tpc = new TempPrintClass("payfair");	
 
 	}
 	
-	
-	
-	
-	
-	
-//	public static void call_me() throws Exception {
-//
-//		String url = "https://api.coinmarketcap.com/v1/ticker/";
-//		URL obj = new URL(url);
-//		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-//		BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-//		String inputLine;
-//		StringBuffer response = new StringBuffer();
-//		while ((inputLine = in.readLine()) != null) {
-//			response.append(inputLine);
-//		}
-//		in.close();
-//
-//		JSONArray myResponse = new JSONArray(response.toString());
-//		System.out.println(new JsonPrettier().prettyFy(myResponse));
-//	}
-
 }
 
 // System.out.println("Name: " + myResponse.getString("name"));

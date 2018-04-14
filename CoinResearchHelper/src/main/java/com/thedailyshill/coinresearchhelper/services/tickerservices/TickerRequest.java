@@ -4,10 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import org.json.JSONArray;
 
-import com.thedailyshill.coinresearchhelper.services.JsonPrettier;
 
 public class TickerRequest {
 	
@@ -15,9 +13,7 @@ public class TickerRequest {
 	String inputLine;
 	StringBuffer response = new StringBuffer();
 
-
 	public JSONArray returnTickerRequest() throws Exception {
-
 		
 		URL obj = new URL(defaultUrl);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -33,7 +29,6 @@ public class TickerRequest {
 	}
 	
 	public JSONArray returnTickerRequest(String cryptoName) throws Exception {
-
 		
 		URL obj = new URL(defaultUrl+cryptoName);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -47,6 +42,4 @@ public class TickerRequest {
 		return new JSONArray(response.toString());
 
 	}
-
-
 }
