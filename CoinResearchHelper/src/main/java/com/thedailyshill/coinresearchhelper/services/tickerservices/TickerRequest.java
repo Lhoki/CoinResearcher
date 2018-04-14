@@ -16,7 +16,7 @@ public class TickerRequest {
 	StringBuffer response = new StringBuffer();
 
 
-	public String returnTickerRequest() throws Exception {
+	public JSONArray returnTickerRequest() throws Exception {
 		
 		URL obj = new URL(defaultUrl);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -27,12 +27,11 @@ public class TickerRequest {
 		}
 
 		in.close();
-		JSONArray myResponse = new JSONArray(response.toString());
-		return new JsonPrettier().prettyFy(myResponse);
+		return new JSONArray(response.toString());
 
 	}
 	
-	public String returnTickerRequest(String cryptoName) throws Exception {
+	public JSONArray returnTickerRequest(String cryptoName) throws Exception {
 		
 		URL obj = new URL(defaultUrl+cryptoName);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -43,9 +42,9 @@ public class TickerRequest {
 		}
 
 		in.close();
-		JSONArray myResponse = new JSONArray(response.toString());
-		return new JsonPrettier().prettyFy(myResponse);
+		return new JSONArray(response.toString());
 
 	}
+
 
 }
