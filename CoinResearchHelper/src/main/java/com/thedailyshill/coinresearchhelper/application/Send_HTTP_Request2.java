@@ -5,33 +5,15 @@
  */
 package com.thedailyshill.coinresearchhelper.application;
 
-<<<<<<< HEAD
-
-import com.thedailyshill.coinresearchhelper.services.tickerservices.ReturnSingleData;
-=======
-import com.thedailyshill.coinresearchhelper.services.tickerservices.MarketCapRequest;
->>>>>>> d3dce49789b80592f61a43ea643ed495c63de687
-import com.thedailyshill.coinresearchhelper.services.tickerservices.TickerRequest;
+import com.thedailyshill.coinresearchhelper.services.tickerservices.DataRequest;
 
 public class Send_HTTP_Request2 {
 	public static void main(String[] args) throws Exception {
+		System.out.println(new DataRequest().marketCap("bitcoin"));
 		
-		TickerRequest tr = new TickerRequest();
-		MarketCapRequest mkr = new MarketCapRequest();
-		
-<<<<<<< HEAD
-		ReturnSingleData rsd = new ReturnSingleData();		
-		System.out.println(rsd.returnSingleData("max_supply", "bitcoin"));
+//		ReturnSingleData rsd = new ReturnSingleData();		
+//		System.out.println(rsd.returnSingleData("max_supply", "payfair"));
 
-=======
-		System.out.println(mkr.returnMarketCap("payfair"));
-		System.out.print(tr.returnTickerRequest("payfair"));
-//		try {
-//			Send_HTTP_Request2.call_me();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
->>>>>>> d3dce49789b80592f61a43ea643ed495c63de687
 	}
 	
 	
