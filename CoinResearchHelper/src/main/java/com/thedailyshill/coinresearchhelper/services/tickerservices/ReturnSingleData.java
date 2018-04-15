@@ -15,7 +15,5 @@ public abstract class ReturnSingleData {
 		} else {
 			return myResponse.getString(desiredData);
 		}
-		
-
 	}
 }

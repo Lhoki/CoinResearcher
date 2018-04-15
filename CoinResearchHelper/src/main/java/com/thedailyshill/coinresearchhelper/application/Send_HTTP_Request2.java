@@ -5,12 +5,14 @@
  */
 package com.thedailyshill.coinresearchhelper.application;
 
+import com.thedailyshill.coinresearchhelper.services.tickerservices.MarketCapMover;
 
 public class Send_HTTP_Request2 {
 	public static void main(String[] args) throws Exception {
 		
-		TempPrintClass tpc = new TempPrintClass("payfair");	
-
+//		TempPrintClass tpc = new TempPrintClass("payfair");	
+		MarketCapMover mcm = new MarketCapMover();
+		System.out.println(mcm.changeMarketCapForNewCoinValue("bitcoin", "payfair"));
 	}
 	
 }
