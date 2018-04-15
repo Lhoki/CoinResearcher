@@ -1,6 +1,7 @@
 package com.thedailyshill.coinresearchhelper.services;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -18,6 +19,13 @@ public class JsonPrettier {
 		String prettyJsonString = gson.toJson(je);
 		return prettyJsonString;	
 		
+	}
+
+	public String prettyFy(JSONObject jsonObject) {
+		
+		JsonElement je = jp.parse(jsonObject.toString());
+		String prettyJsonString = gson.toJson(je);
+		return prettyJsonString;
 	}
 
 }

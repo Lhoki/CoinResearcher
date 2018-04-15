@@ -1,21 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.thedailyshill.coinresearchhelper.application;
 
-import com.thedailyshill.coinresearchhelper.services.tickerservices.MarketCapMover;
-
-public class Send_HTTP_Request2 {
-	public static void main(String[] args) throws Exception {
-		
-//		TempPrintClass tpc = new TempPrintClass("payfair");	
-		MarketCapMover mcm = new MarketCapMover();
-		System.out.println(mcm.changeMarketCapForNewCoinValue("bitcoin", "payfair"));
-	}
-	
-}
 
 // System.out.println("Name: " + myResponse.getString("name"));
 // System.out.println("Symbol: " + myResponse.getString("symbol"));
